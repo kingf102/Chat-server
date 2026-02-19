@@ -1,6 +1,35 @@
-/.git
-/node_modules
-.dockerignore
-.env
+# Dependency directories (Don't copy local versions!)
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+.cache/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Docker files (The container doesn't need to hold its own blueprints)
 Dockerfile
-fly.toml
+.dockerignore
+
+# Git files
+.git
+.gitignore
+.github
+
+# Environment variables (Safety first! Keep secrets out of images)
+.env
+.env.local
+.env.production
+
+# OS junk
+.DS_Store
+Thumbs.db
